@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>   
+                //3.1.Комп’ютер випадковим чином генерує число.
+                //Вгадати, чи наступне число буде більшим чи меншим.
+                function random(min, max) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min)) + min
+                }
+                var firstNumber1 = parseInt(prompt("Введіть число від 1 до 5"));
+                var firstNumber2 = parseInt(prompt("Друга спроба. Введіть число від 1 до 5"));
+                var secondNumber = random(1, 6);
+                if (firstNumber1 && secondNumber == firstNumber1)
+                {
+                    alert("Wizard")
+                    document.write("Перша спроба " + firstNumber1 + "<br>")
+                }
+                else if (firstNumber2 && secondNumber == firstNumber2)
+                {
+                    alert("Wizard")
+                    document.write("Друга спроба " + firstNumber2)
+                }
+                else {
+                    alert("Looooooser");
+                    document.write("<br> Не вгадав. Правильно буде " + secondNumber)
+                }
+               
+        
+            </script>
+        
+</body>
+</html>
