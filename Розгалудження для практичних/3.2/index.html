@@ -16,18 +16,23 @@
                     return Math.floor(Math.random() * (max - min)) + min
                 }
                 var firstNumber1 = parseInt(prompt("Введіть число від 1 до 5"));
-                var firstNumber2 = parseInt(prompt("Друга спроба. Введіть число від 1 до 5"));
+                var firstNumber2
                 var secondNumber = random(1, 6);
                 if (firstNumber1 && secondNumber == firstNumber1)
                 {
                     alert("Wizard")
                     document.write("Перша спроба " + firstNumber1 + "<br>")
                 }
-                else if (firstNumber2 && secondNumber == firstNumber2)
+                
+                if (firstNumber1 && secondNumber !== firstNumber1)
                 {
-                    alert("Wizard")
-                    document.write("Друга спроба " + firstNumber2)
+                   firstNumber2 = parseInt(prompt("Друга спроба. Введіть число від 1 до 5"))
                 }
+                if (firstNumber2 && secondNumber == firstNumber2)
+                    {
+                    alert("Wizard")
+                    document.write("Друга спроба " + firstNumber2 + "<br>")
+                    }
                 else {
                     alert("Looooooser");
                     document.write("<br> Не вгадав. Правильно буде " + secondNumber)
