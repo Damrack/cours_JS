@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- На складе имеется определённое количество ящиков с яблоками 
+    (в нашем примере 15).
+    Когда подъезжает машина для погрузки, попросить пользователя ввести, 
+    сколько ящиков загрузить в первую машину,  во вторую и так далее, 
+    пока не закончатся ящики с яблоками. Предусмотреть тот случай, 
+    когда пользователь введёт количество ящиков больше, чем есть на складе. -->
+
+    <script>
+        var appel = 15
+        
+        for (let i = 0; i < appel; i++) {
+            var n1 = parseInt(prompt("Скільки ящиків загрузити в машину?"))
+            if (n1 > 15){
+                document.write("Введено більiе ящиків ніж є на складі") 
+                break}
+            if (appel => n1) {
+            var newAppel = appel - n1
+            appel = newAppel
+
+                if (appel == 0)
+                document.write("Ящики з яблуками успішно погружено")
+                else 
+                {
+                alert(`Загружено ${n1} ящиків. Залишилось ${appel} ящиків на складі`)
+                }
+                i = 0
+            }
+            
+        }
+      
+        
+            
+        
+    </script>
+</body>
+</html>
