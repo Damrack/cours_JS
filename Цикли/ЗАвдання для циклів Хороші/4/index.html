@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Необходимо суммировать все  нечётные целые числа в диапазоне, 
+    который введёт пользователь с клавиатуры. -->
+    <script>
+        var sum = 0
+        var number1 = parseInt(prompt("Введіть перше число"))
+        var number2 = parseInt(prompt("Введіть друге число"))
+
+       
+            for (var i = number1; i < number2; i++){
+                if (i % 2 == 1)
+                sum += i
+                document.write(sum)}
+        
+        
+    </script>
+    
+</body>
+</html>
