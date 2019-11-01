@@ -17,26 +17,25 @@
 
     <script>
         var appel = 15
-        
-        for (let i = 0; i < appel; i++) {
-            var n1 = parseInt(prompt("Скільки ящиків загрузити в машину?"))
+    
+      while (appel>0) {
+        var n1 = parseInt(prompt("Скільки ящиків загрузити в машину?"))
+      
             if (n1 > 15){
                 document.write("Введено більiе ящиків ніж є на складі") 
                 break}
-            if (appel => n1) {
-            var newAppel = appel - n1
-            appel = newAppel
 
-                if (appel == 0)
-                document.write("Ящики з яблуками успішно погружено")
+            if (appel => n1) {
+                var newAppel = appel - n1
+                appel = newAppel
+                
+            if (appel == 0)
+                 document.write("Ящики з яблуками успішно погружено")
+                 
                 else 
-                {
                 alert(`Загружено ${n1} ящиків. Залишилось ${appel} ящиків на складі`)
                 }
-                i = 0
-            }
-            
-        }
+     }
       
         
             
