@@ -16,21 +16,19 @@
         var i = 0
         do {
             var number = parseInt(prompt("Введіть число"))
+            i++
         }
         while (number>0) {
-            
-            if(number>0){
                 number+=number
-                i++
-                var res = number/i
-            }
-            else{
+                var res = number/(i-1)
+        }
+            if (number==0){
                 alert("Програма завершена, введено 0")
                 document.write(`${res}`)
                 
             }
             
-        }
+        
         
     </script>
 </body>
