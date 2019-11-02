@@ -13,23 +13,20 @@
         Введення закінчується після введеня 0. -->
 
     <script>
-        var i = 0
+        var i = 1
+        var number1 = 0
         do {
-            var number = parseInt(prompt("Введіть число")) 
+            number = parseInt(prompt("Введіть число")) 
         }
         while (number>0) {
-                number+=number
+                number1+=number
                 i++
-                var res = number/(i-1)
+                var res = number1/i
         }
             if (number==0){
                 alert("Програма завершена, введено 0")
                 document.write(`${res}`)
-                
-            }
-            
-        
-        
+            }     
     </script>
 </body>
 </html>
