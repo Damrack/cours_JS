@@ -12,17 +12,19 @@
         Знайти суму перших N парних чисел.. -->
 
     <script>
-        
-        var number1 = 0
+        var N = parseInt(prompt("Введіть N")) //Все, що потрібно знати вводимо 
+        var number1 = 0   //Кількість парних
+        var sum=0   //Сума парних
         do {
             var number = parseInt(prompt("Введіть число"))
-            if (number%2 == 0)
-            number1+=number
-        }
+            if (number%2 == 0){
+               sum+=number
+                number1++
+            }
+        }   
+        while (number1<N)        
         
-        while (number>0) {       
-        }
-                document.write(`${number1}`)
+       document.write(`Sum =${sum}`)
                 
         
   
