@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 5. На екрані виводиться меню: 
+    1. Сказати «Привіт». 
+    2. Сказати «Зачекай». 
+    3. Сказати «До побачення». 
+    4. Вихід.
+    Шляхом вибору пунктів меню виводити відповідні повідомлення,
+     поки не буде вибрано пункт номер 4. -->
+
+     <label>
+        1. Сказати «Привіт».<br> 
+        2. Сказати «Зачекай». <br>
+        3. Сказати «До побачення». <br>
+        4. Вихід. <br>
+        <input id="num" type="number">
+    </label> <br>
+      
+    <button id="btn">
+        Get result
+    </button> <br>
+    <label>
+            Повідомлення
+            <input id="pov" type="string">
+        </label> <br>
+
+    <script>
+        document.getElementById("btn").onclick=function(){
+        do {
+            var number1 = parseInt(document.getElementById("num".value))
+            var result
+            switch (number1) {
+                case "1": result = "«Привіт»"
+                    break;
+                case "2": result = "«Зачекай»"
+                    break;
+                case "3": result = "«До побачення»"
+                    break;
+                case "4": result = "Вихід"
+                    break;
+                default:
+                    break;
+            }
+            document.getElementById("pov").value=result
+        }
+        
+        while (number1 !== 4) {  
+            
+        }
+        
+        }
+                
+        
+  
+        
+    </script>
+</body>
+</html>
