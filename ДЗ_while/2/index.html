@@ -18,16 +18,16 @@
         -->
 
     <script>
-        
+        var number1 = parseInt(prompt("Введіть число 1"))
+        var number2 = parseInt(prompt("Введіть число 2"))
         do {
-            var number1 = parseInt(prompt("Введіть число 1"))
-            var number2 = parseInt(prompt("Введіть число 2"))
+            
             document.write(`${number1} --- ${number2} <br>`)
+            number1++   // Величини повинні змінюватися автоматично у циклі
+            number2--
         }
         
-        while (number1 < number2) {  
-        }
-       
+        while (number1 < number2) 
                 
         
   
