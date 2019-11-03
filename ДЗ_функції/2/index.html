@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- Створити функцію, яка за номером місяця повертає його назву -->
+
+        <script>
+        function month(num) {
+            switch (num) {
+                case 1: return "Січень"
+                case 2: return "Лютий"
+                case 3: return "Березнь"
+                case 4: return "Квітень"
+                case 5: return "Травень"
+                case 6: return "Червень"
+                case 7: return "Липень"
+                case 8: return "Серпень"
+                case 9: return "Вересень"
+                case 10: return "Жовтень"
+                case 11: return "Листопад"
+                case 12: return "Грудень"
+                
+            
+                default: return "Error"
+                    
+            }
+            
+        }
+        var userNumber = parseInt(prompt("Номер місяця"))
+        var message = month(userNumber)
+        document.write(message)
+        
+    </script>
+</body>
+</html>
