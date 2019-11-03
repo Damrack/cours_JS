@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- Створити функції, які переводять:
+1)	Сантиметри у дюйми;
+2)	Кілограми у фунти;
+3)	Кілометри у милі.
+ -->
+
+        <script>
+            const inch = 0.394
+            const funt = 0.454
+            const mile = 0.621
+
+        function smVsInch(num1) {
+            var total = num1 * inch
+            return total   
+        }
+        function kgVsFunt(num1) {
+            var total = num1 * funt
+            return total
+        }
+        function kmVsMile(num1) {
+            var total = num1 * mile
+            return total
+        }
+        var result
+        var userNumber = parseInt(prompt("1) Сантиметри у дюйми 2) Кілограми у фунти 3)	Кілометри у милі."))
+        switch (userNumber) {
+            
+            case 1: var numSm = parseInt(prompt("Введіть сантиметри"))
+            result = smVsInch(numSm)
+            break;
+            case 2: var numKg = parseInt(prompt("Введіть кілограми"))
+            result = kgVsFunt(numKg)
+            break;
+            case 3: var numKm = parseInt(prompt("Введіть кілометри"))
+            result = kmVsMile(numKm)
+            break;    
+
+            default: break;
+        }
+        document.write(result)
+    </script>
+</body>
+</html>
