@@ -17,11 +17,11 @@
         var number1 = 0
         do {
             number = parseInt(prompt("Введіть число")) 
+            number1+=number
+                i++
         }
         while (number>0) {
-                number1+=number
-                i++
-                var res = number1/i
+                var res = number1/(i-1)
         }
                 alert("Програма завершена, введено 0")
                 document.write(`${res}`)
