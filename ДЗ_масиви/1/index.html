@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- Дано послідовність оцінок учня. Підрахувати кількість:
+1)	двійок
+2)	кількість хороших оцінок (добре, відмінно);
+3)	кількість оцінок, які нижче середнього.
+
+
+ -->
+
+    <script>
+        const marks = [2, 3, 5, 10, 2, 2, 11, 7, 7, 9, 4]
+           function getCount2(marks) {
+               let count2 = 0
+              for (let i = 0; i < marks.length; i++) {
+                  if (marks[i] == 2 || marks[i] == 1 || marks[i] == 3)
+                        count2++
+              }
+              return count2
+           }
+           
+           function getGood(marks) {
+            let countGood = 0
+              for (let i = 0; i < marks.length; i++) {
+                if (marks[i] == 7 || marks[i] == 8 || marks[i] == 9)
+                        countGood++
+              }
+              return countGood
+           }
+
+           function getAverage(marks) {
+               let average = 0
+               for (let i = 0; i < marks.length; i++) {
+                    if (marks[i] == 6 || marks[i] == 5 || marks[i] == 4)
+                        average++
+              }
+               return average
+           }
+
+           document.write(`Кількість двійок: ${getCount2(marks)} <br>
+                            Кількість хороших оцінок: ${getGood(marks)} <br>
+                            Кількість оцінок, які нижче середнього ${getAverage(marks)}`)
+    </script>
+</body>
+</html>
