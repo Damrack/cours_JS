@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!-- Користувач задає рік народження. 
+    Визначити кількість років користувача -->
+ 
+    
+ 
+ <label>
+     Введіть рік народження
+ <input type="number" id="age" value="1945"> 
+ </label> <br>
+ <button onclick="getAge(age)">
+        Результат
+    </button> 
+
+
+ 
+ <script>
+ function getAge(age) {
+     let ageRes = 2019 - parseInt(document.getElementById("age").value)
+     if (ageRes <=100)
+            alert(`Вам ${ageRes} років`)
+     else
+        if (ageRes >= 100 && ageRes<=120) 
+             alert(`Ви щасливчик, Вам ${ageRes} років`)
+     else
+            alert(`Людина стільки не живе. Зараз Вам має бути ${ageRes} років. Можливо Ви машина???`)
+
+ }
+ </script>
+ 
+</body>
+</html>
