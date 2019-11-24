@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+// . Дано списки продуктів. Знайти сумарну вартість
+
+        function getSumOfGroup(checkboxArr) {
+            Sum = 0;
+            for (var i = 0; i < checkboxArr.length; i++) {
+                if (checkboxArr[i].checked)
+                {
+                   Sum += +checkboxArr[i].value;
+                }
+            }
+            return Sum;
+        }
+
+        function getTotalSum() {
+            let vegetablsGroup = document.querySelectorAll("[name='vegetabls']")
+            let totalPrice = getSumOfGroup(vegetablsGroup)
+            let total = 0
+            total+=totalPrice
+            document.write(`${total}`)
+        }
+    </script>
+</body>
+
+<body>
+    
+    <label for="1">
+        Картопля
+        <input type="checkbox" name="vegetabls" id="1" value="12" > <br>
+    </label>
+    <label for="2">
+         Помідори
+        <input type="checkbox" name="vegetabls" id="2" value="25" ><br>
+    </label>
+    <label for="3">
+        Морква
+        <input type="checkbox" name="vegetabls" id="3" value="6" ><br>
+    </label>
+    <label for="4">
+        Капуста
+        <input type="checkbox" name="vegetabls" id="4" value="5" ><br>
+    </label>
+    <label for="5">
+        Цибуля
+        <input type="checkbox" name="vegetabls" id="5" value="9" ><br>
+    </label>
+    <button id="btn" onclick="getTotalSum()">Summ</button> <hr>
+
+</body>
+</html>
