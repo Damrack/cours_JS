@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const prices=[35,90,170,1500]
+
+        function getTotalSumOfRadioGroup(groupName) {
+            let sum=0
+            const inputs=document.getElementsByName(groupName)
+            for (let i = 0; i < inputs.length; i++) {
+                if(inputs[i].checked)
+                {
+                    sum+=parseFloat(inputs[i].value)                
+                }
+            }
+            return sum
+        }
+        function getTotal() {
+            const destSelect=document.getElementById('destCity')
+            const cityNum= parseInt(destSelect.value)          
+            let totalSum=prices[cityNum]
+            const teaInp=document.getElementById('tea')
+            if (teaInp.checked) {
+                totalSum+=parseFloat(teaInp.value)
+            }
+            const shtsInp=document.getElementById('sheets')
+            if (shtsInp.checked) {
+                totalSum+=parseFloat(shtsInp.getAttribute('price'))
+            }
+            //--------------------- breakfast
+            const breakfastPrice= getTotalSumOfRadioGroup('br')
+            totalSum+=breakfastPrice
+            //--------------------- fruits
+            const fruitsPrice=getTotalSumOfRadioGroup('fruits')
+            totalSum+=fruitsPrice
+            //------------------
+            document.getElementById('total').innerText=totalSum
+        }
+
+        // створили таблицю
+        function createTable() {
+            const table = document.createElement('table')
+            table.id='ticket'
+            table.border='2px'
+            const tr = document.createElement('tr')
+            const td = document.createElement('td')
+            td.innerText("Значення")
+            tr.appendChild(td)
+            const td3 = document.createElement('td')
+            td3.innerText('Вартість')
+            tr.appendChild(td3)
+            table.appendChild(tr)
+            return table
+        }
+        //  привязуємо значення до рядкуів таблиці
+        function fieldReading() {
+            const newTable = createTable(5)
+            const destCity1 = document.getElementById('destCity')
+            const destCityValue = destCity1.value
+            const tableTicket = document.getElementById('ticket')
+        }
+        
+        window.onload=function(){   //Викличеться після завершення завантаження сторінки
+            document.getElementById('total').innerText=''
+           // document.getElementById('btn').onclick=getTotal
+            document.getElementById('btn').onclick=createTable
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <label>
+            Місто призначення
+            <select id="destCity">
+                <option value="0">Мукачеве</option>
+                <option value="1">Хуст</option>
+                <option value="2">Львів</option>
+                <option value="3">Київ</option>
+            </select>
+        </label>
+    </p>
+    <p>
+        <label>
+            Чай
+            <input type="checkbox" name="" id="tea" value="10">
+        </label> <br>
+        <label>
+            Постільна білизна
+            <input type="checkbox" name="" id="sheets" price="15">
+        </label> <br>
+        <hr>
+        Сніданок:
+        <label>
+            Ресторан
+            <input type="radio" name="br" value="2500">            
+        </label>
+        <label>
+                Печиво зранку
+                <input type="radio" name="br" value="20">            
+            </label>
+        <hr>
+        Фрукти:
+        <label>
+            Виноград
+            <input type="radio" name="fruits"  value="60">            
+        </label>
+        <label>
+                Яблучка
+                <input type="radio" name="fruits" value="12">            
+            </label>
+            <label>
+                    Банани
+                    <input type="radio" name="fruits" value="36">            
+                </label>
+    
+        <hr>
+
+        <button id='btn'>
+            Розрахувати повну вартість і вивести у таблицю
+        </button>
+        <hr>
+        <p>
+            Повна вартість : <span id="total"> </span>
+        </p>
+</body>
+
+</html>
