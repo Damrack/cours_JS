@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // Розробити калькуляртор
+        function plus() {
+            const firstNumber = document.getElementById('firstNumber')
+            const fN = +firstNumber.value
+            const secondNumber = document.getElementById('secondNumber')
+            const sF = +secondNumber.value
+            const result = document.getElementById('res')
+            result.value = fN + sF
+        }
+
+        function minus() {
+            const firstNumber = document.getElementById('firstNumber')
+            const fN = +firstNumber.value
+            const secondNumber = document.getElementById('secondNumber')
+            const sF = +secondNumber.value
+            const result = document.getElementById('res')
+            result.value = fN - sF
+        }
+
+        function mnog() {
+            const firstNumber = document.getElementById('firstNumber')
+            const fN = +firstNumber.value
+            const secondNumber = document.getElementById('secondNumber')
+            const sF = +secondNumber.value
+            const result = document.getElementById('res')
+            result.value = fN * sF
+        }
+
+        function dill() {
+            const firstNumber = document.getElementById('firstNumber')
+            const fN = +firstNumber.value
+            const secondNumber = document.getElementById('secondNumber')
+            const sF = +secondNumber.value
+            const result = document.getElementById('res')
+            result.value = fN / sF
+        }
+    </script>
+</head>
+<body>
+    <label for="firstNumber">
+        Число №1
+        <input type="number" id="firstNumber">
+    </label> <br>
+    <label for="secondNumber">
+            Число №2
+            <input type="number" id="secondNumber">
+        </label> <br>
+        <button id="plus" onclick="plus()">Додати</button>
+        <button id="minus" onclick="minus()">Відняти</button>
+        <button id="mnog" onclick="mnog()">Помножити</button>
+        <button id="dill" onclick="dill()">Поділити</button>
+        <br> <hr>
+        <label for="res">
+            Результат
+            <input type="number" id="res">
+        </label>
+    </body>
+</body>
+</html>
