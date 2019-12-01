@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        // Зробити конвертер валют
+
+        function konverter() {
+            const grn = document.getElementById('grn')
+            const evro = document.getElementById('evro')
+            const dolar = document.getElementById('dolar')
+            let getValueGrn = +grn.value
+            let getValueEvro = +evro.value
+            let getValueDolar = +dolar.value
+            if (getValueGrn) {
+                let getValueEvro = (getValueGrn / 28).toFixed()
+                let getValueDolar = (getValueGrn / 24).toFixed(2)
+                evro.value = getValueEvro
+                dolar.value = getValueDolar
+            }
+            if (getValueEvro) {
+                let getValueGrn = (getValueEvro * 28).toFixed(2)
+                let getValueDolar = (getValueEvro * 1.1).toFixed(2)
+                grn.value = getValueGrn
+                dolar.value = getValueDolar
+            }
+            if (getValueDolar) {
+                let getValueEvro = (getValueDolar * 0.9).toFixed(2)
+                let getValueGrn = (getValueDolar * 24).toFixed(2)
+                grn.value = getValueGrn
+                evro.value = getValueEvro
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="grn">
+        Гривні
+        <input type="text" id="grn">
+    </label> <br>
+    <label for="evro">
+        Євро
+        <input type="text" id="evro">
+    </label> <br>
+    <label for="dolar">
+        Долари
+        <input type="text" id="dolar">
+    </label> <br>
+    <button id="konvert" onclick="konverter()">Конвертувати</button>
+</body>
+</html>
