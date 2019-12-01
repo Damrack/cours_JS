@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // Задача. Сформувати список працівників 
+        // (ПІБ, посада, заробітна плата). По одному додається інформація 
+        // про працівників у вигляді таблиці (як у попередньому завданні). 
+        // Потім знайти сумарну заробітну плату працівників,
+        //  у яких заробітна плата більша за 3000.
+
+
+        function addTr() {
+            let tr = document.createElement(tr)
+            let tdPIB = document.createElement(td)
+            tdPIB.type='text'
+            tdPIB.id='PIB'
+            tr.appendChild(tdPIB)
+            let tdPosada = document.createElement(td)
+            let selectPosada = document.createElement(select)
+            let optionPosada = document.createElement(option)
+            optionPosada.value='0'
+            
+
+            let newTrForTable = document.getElementById('head')
+            newTrForTable.appendChild(newTr)
+            
+        }
+    </script>
+</head>
+<body>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>П.І.Б</th>
+                <th>Посада</th>
+                <th>Заробітня плата</th>
+            </tr>
+        </thead>
+        <tbody id ="head">
+            <tr>
+                <td>
+                    <input type="text" id="PIB">
+                </td>
+                <td>
+                    <select id="posada">
+                        <option value="0">Начальник відділу</option>
+                        <option value="1">Заступник</option>
+                        <option value="2">Працівник</option>
+                        <option value="3">Діловод</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="paid">
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <br>
+    <button id="addTr" onclick="addTr">
+        Додати рядок
+    </button>
+    <button id="totalPaid">
+        Сумарна заробітня платня
+    </button>
+</body>
+</html>
