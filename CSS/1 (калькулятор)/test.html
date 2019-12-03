@@ -1,142 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script>
-
-function aryfmetOperation(num1, operation, num2) {
-            const screen = document.getElementById('screen')
-            switch (operation) {
-                case '/':
-                    screen.value = num1 / num2
-                    break;
-                case '*':
-                    screen.value = num1 * num2
-                    break;
-                case '-':
-                    screen.value = num1 - num2
-                    break;
-                case '+':
-                    screen.value = num1 + num2
-                    break;
-                default:
-                    break;
-            }
-        }
-        var num1
-        var num2
-        var operation
-
-        function click(event) {
-            const button = event.target
-            const screen=document.getElementById('screen')
-            let btnSymb = button.innerText
-            switch (true) {
-                case btnSymb >= 0 && btnSymb <= 9:
-                    screen.value += btnSymb
-                    break;
-                case btnSymb == '/' || btnSymb == '*' || btnSymb == '+' || btnSymb == '-':
-                    num1 = parseInt(screen.value)
-                    operation = btnSymb
-                    screen.value = ''
-                    break;
-                case btnSymb == 'c':
-                    screen.value = ''
-                    break;
-                case btnSymb == '=':
-                    num2 = parseInt(screen.value)
-                    screen.value = ''
-                    aryfmetOperation(num1, operation, num2)
-                    break;
-                default:
-                    break
-            }
-        }
-        window.onload = function () {
-            document.getElementById("keyBoard").onclick = click     
-        }
-
-    </script>
-  
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Селекторы атрибутов</title>
 </head>
-        <style>
-        .numm {
-        margin: 8px;
-        padding: 15px 25px;
-        cursor: pointer ;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: rgb(0, 0, 0);
-        background-color: #479607b4;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 5px #999;
-        column-gap: 5px;
-        font-size: 20px;
-        }
+ <body>
+  <p><a href="#">Теги HTML</a> | 
+  <a href="http://ukr.net">Шаг за шагом</a> | 
+  <a href="http://css.in.a">Графика для Веб</a>
+  </p>
+  <p><a href="#" class=”ok”>Теги HTML</a> | 
+  <a href="http://Cpp.net">Шаг за шагом</a> | 
+  <a href="http://css.in.org">Графика для Веб</a>
+  </p>
+<p id=”red”>
+   Text Text Text  Text Text Text Text Text Text 
+</p>
+<p id=”blue”>
+   Text Text Text  Text Text Text Text Text Text 
+</p>
+<p class=”last”>
+   Text Text Text  Text Text Text Text Text Text 
+</p>
 
-        .numm:hover {background-color: #0faa76}
-
-        .numm:active {
-        background-color: #3a813c;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-        }
-        </style>
-<body>
-        
-    <table border="1px">
-        <thead>
-            <tr>
-                <td colspan="4">
-                    <input type="text" id="screen" >
-                    <style>
-                        input[type=text], select {
-                        width: 100%;
-                        padding: 10px 50px;
-                        display: inline-block;
-                        border: 5px solid #ccc;
-                        border-radius: 8px;
-                        box-sizing: border-box;
-                        font-size: 20px;
-                        }
-                    </style>
-                </td>
-            </tr>
-        </thead>
-        <tbody id="keyBoard">
-            <tr>
-                <td><button class="numm">1</button></td>
-                <td><button class="numm">2</button></td>
-                <td><button class="numm">3</button></td>
-                <td><button class="numm">/</button></td>
-            </tr>
-            <tr>
-                <td><button class="numm">4</button></td>
-                <td><button class="numm">5</button></td>
-                <td><button class="numm">6</button></td>
-                <td><button class="numm">*</button></td>
-            </tr>
-            <tr>
-                <td><button class="numm">7</button></td>
-                <td><button class="numm">8</button></td>
-                <td><button class="numm">9</button></td>
-                <td><button class="numm">-</button></td>
-            </tr>
-            <tr>
-                <td><button class="numm">0</button></td>
-                <td><button class="numm">c</button></td>
-                <td><button class="numm">=</button></td>
-                <td><button class="numm">+</button></td>
-            </tr>
-        </tbody>
-    </table>
-
-</body>
-
+ </body>
 </html>
