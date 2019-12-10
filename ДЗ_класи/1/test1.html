@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<script>
+    class BrnAvto{
+
+        constructor(payDay = 1000, sale = 0.05){
+            this.payDay = payDay
+            this.sale = sale
+           
+        }
+
+        getCostPay=()=>{
+            const userValue = +(this.userInput.value)
+            
+            if (userValue >= 10){
+                this.result.innerText = (userValue*payDay)*sale
+            }
+            else{
+                this.result.innerText = userValue*payDay
+            }
+        }
+
+        render(conteinerId){
+            const conteiner = document.getElementById(conteinerId)
+
+            let div = document.createElement('div')
+            div.innerText = 'На скільки днів бронювати авто: '
+            this.userInput = document.createElement('input')
+            div.appendChild(this.userInput)
+            conteiner.appendChild(div)
+
+            let btn = document.createElement('button')
+            btn.innerText = 'Розрахувати вартість'
+            btn.onclick = this.getCostPay
+            conteiner.appendChild(btn)
+
+            div = document.createElement('div')
+            div.innerText = 'Результат: '
+            this.result = document.createElement('span')
+            div.appendChild(this.result)
+            conteiner.appendChild(div)
+
+
+        }
+    }
+
+    window.onload=function(){
+        const avtoBrn = new BrnAvto()
+        avtoBrn.render('conteiner')
+    }
+</script>
+
+</head>
+<body>
+    
+    <div id="conteiner"></div>
+</body>
+</html>
