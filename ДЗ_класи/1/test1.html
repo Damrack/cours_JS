@@ -13,16 +13,17 @@
             this.payDay = payDay
             this.sale = sale
            
+           
         }
 
         getCostPay=()=>{
-            const userValue = +(this.userInput.value)
+            const userValueDay = +(this.userInput.value)
             
-            if (userValue >= 10){
-                this.result.innerText = (userValue*payDay)*sale
+            if (userValueDay >= 10){
+                this.result.innerText = (userValueDay*this.payDay) - (userValueDay*this.payDay*this.sale)
             }
             else{
-                this.result.innerText = userValue*payDay
+                this.result.innerText = userValueDay*this.payDay
             }
         }
 
