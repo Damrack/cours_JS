@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        class Images{
+            constructor(min = 0, max = 4){
+                this.min = min
+                this.max = max
+                this.imgArr = []
+
+                this.imgArr[0] = {
+                    sourse: '0.jpg'
+                }
+                this.imgArr[1] = {
+                    sourse: '1.jpg'
+                }
+                this.imgArr[2] = {
+                    sourse: '2.jpg'
+                }
+                this.imgArr[3] = {
+                    sourse: '3.jpg'
+                }
+                this.imgArr[4] = {
+                    sourse: '4.jpg'
+                }
+            }
+
+            getRandonNumber=()=>{
+                return Math.floor(this.min + Math.random()*(this.max - this.min + 1))
+            }
+
+            createImg=()=>{
+                let randomNum = this.getRandonNumber()
+                if (randomNum) {
+                let img = document.createElement('img')
+                img.src = this.imgArr[randomNum].sourse
+                conteiner.appendChild(img)
+                
+            }
+        }
+
+            render(conteinerId){
+                let conteiner = document.getElementById(conteinerId)
+
+                const btn = document.createElement('button')
+                btn.innerText = 'Нажми на мене'
+                btn.onclick = this.createImg
+                conteiner.appendChild(btn)  
+            }
+        }
+
+        window.onload = function(){
+            const conteiner = new Images()
+            conteiner.render('conteiner')
+
+        }
+    </script>
+</head>
+<body>
+    <div id="conteiner"></div>
+    
+</body>
+</html>
